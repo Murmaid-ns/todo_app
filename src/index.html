@@ -18,33 +18,11 @@
           autocomplete="off">
 
         <button class="todo-app__submit btn btn-primary">Submit</button>
+        <button class="todo-app__delete btn btn-primary">Delete completed</button>
       </form>
     </header>
 
     <ul id="list" class="todo-list list-group">
-      <li class="todo-list__item input-group mb-3">
-        <div class="input-group-prepend">
-          <div class="input-group-text">
-            <input type="checkbox">
-          </div>
-        </div>
-
-        <input
-          value="Some text"
-          aria-label="Some text"
-          class="todo-list__input-text form-control"
-          type="text"
-          readonly>
-
-        <div class="todo-list__controls input-group-append">
-          <button class="btn btn-warning btn-sm">
-            <span class="material-icons">edit</span>
-          </button>
-          <button class="btn btn-danger btn-sm">
-            <span class="material-icons">delete_outline</span>
-          </button>
-        </div>
-      </li>
     </ul>
 
     <div class="todo-app__tabs btn-group" role="group">

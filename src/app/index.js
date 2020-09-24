@@ -4,7 +4,7 @@ import TodoList from './todo';
 class TodoApp extends TodoList {
   #list = {};
 
-  constructor(form, list, todoInput, allBtn, completedBtn, uncompletedBtn, arrBtn) {
+  constructor(form, list, todoInput, allBtn, completedBtn, uncompletedBtn, arrBtn, deleteBtn) {
     super();
 
     this.#list = list;
@@ -35,6 +35,9 @@ class TodoApp extends TodoList {
       const todos = super.filterTodos('uncompleted');
       super.switchBtn(uncompletedBtn, arrBtn);
       this.renderTodos(todos);
+    });
+    deleteBtn.addEventListener('click', () => {
+      this.deleteCompleted();
     });
   }
 
@@ -164,6 +167,7 @@ const allBtn = document.querySelector('#all');
 const completedBtn = document.querySelector('#completed');
 const uncompletedBtn = document.querySelector('#uncompleted');
 const arrBtn = document.querySelectorAll('#all,#completed,#uncompleted');
+const deleteCompletedBtn = document.querySelector('.todo-app__delete');
 
 const todoApp = new TodoApp(
   todoForm,
@@ -173,6 +177,7 @@ const todoApp = new TodoApp(
   completedBtn,
   uncompletedBtn,
   arrBtn,
+  deleteCompletedBtn,
 );
 
-todoApp();
+console.log(todoApp);

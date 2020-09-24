@@ -82,4 +82,14 @@ export default class TodoList {
       button.classList.remove('btn-outline-primary');
     }
   }
+
+  deleteCompleted() {
+    console.log(Array.isArray(this.todos));
+    this.todos.forEach((todo) => {
+      if (todo.isDone === true) {
+        const elId = todo.id;
+        this.removeTodo(elId);
+      }
+    });
+  }
 }
