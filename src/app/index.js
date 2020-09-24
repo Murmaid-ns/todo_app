@@ -176,8 +176,3 @@ const todoApp = new TodoApp(
 );
 
 todoApp();
-
-const goToGifBtn = document.querySelector('#gifBtn');
-goToGifBtn.addEventListener('click', () => {
-
-});
