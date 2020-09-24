@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpack starter</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="todo-app">
+    <header class="todo-app__header">
+      <form class="todo-app__form">
+        <input
+          id="input"
+          name="todo"
+          class="form-control todo-app__input"
+          placeholder="What you need to do?"
+          autocomplete="off">
+
+        <button class="todo-app__submit btn btn-primary">Submit</button>
+        <button class="todo-app__delete btn btn-primary">Delete completed</button>
+      </form>
+    </header>
+
+    <ul id="list" class="todo-list list-group">
+    </ul>
+
+    <div class="todo-app__tabs btn-group" role="group">
+      <button id="all" type="button" class="btn btn-primary">All</button>
+      <button id="completed" type="button" class="btn btn-outline-primary">Completed</button>
+      <button id="uncompleted" type="button" class="btn btn-outline-primary">Uncompleted</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+@import "fonts";
+@import '~bootstrap/scss/bootstrap';
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  width: 700px;
+  margin: 0 auto;
+
+  &__header {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  &__form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__input {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  &__tabs {
+    margin-top: auto;
+  }
+  &__delete {
+    margin-left: 5px;
+  }
+}
+
+.todo-list {
+  width: 100%;
+
+  &__input-text[readonly] {
+    background-color: #ffffff;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: stretch;
+
+    &.active {
+      .todo-list__input-text {
+        text-decoration: line-through;
+        color: green;
+      }
+    }
+  }
+
+  &__controls {
+    margin-left: auto;
+  }
+}
